@@ -98,14 +98,19 @@ class SortingRobot:
         """
         # THE PLAN - Start by using seleciton sort
         # define a method called sort() ** Already done for us **
-            # pick up the item at starting position 0
-            # loop through all the elements in self.list by checking if you can move right
-               # compare the item being held to each item at postion to see if it's smaller
-                   #if smaller swap the items
-            # when the robot can no longer move right
-                # move left to the empty position
-                # swap item again
+            # turn on light
 
+            # while the light is on
+                # pick up the item at starting position 0 / current position
+                # loop through all the elements in self.list by checking if you can move right
+                   # compare the item being held to each item at postion to see if it's smaller
+                       #if smaller swap the items
+                # when the robot can no longer move right but he is holding an item
+                    # move left to the empty position
+                    # swap item again
+                # if robot cannot move right and there he is not holding any item
+                    # turn off light
+            # return self.list
         pass
 
 
