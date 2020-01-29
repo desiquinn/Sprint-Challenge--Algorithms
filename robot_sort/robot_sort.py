@@ -96,7 +96,21 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        # THE PLAN - Start by using seleciton sort
+        # define a method called sort() ** Already done for us **
+            # turn on light
+
+            # while the light is on
+                # pick up the item at starting position 0 / current position
+                # loop through all the elements in self.list by checking if you can move right
+                   # compare the item being held to each item at postion to see if it's smaller
+                       #if smaller swap the items
+                # when the robot can no longer move right but he is holding an item
+                    # move left to the empty position
+                    # swap item again
+                # if robot cannot move right and there he is not holding any item
+                    # turn off light
+            # return self.list
         pass
 
 
@@ -110,3 +124,59 @@ if __name__ == "__main__":
 
     robot.sort()
     print(robot._list)
+
+
+"""
+Understand:
+This robot has been given abilities to pick up items, compare it to another item
+and swap these items if need be.  This is really everything you need to sort a list.
+I have to tell the robot step by step instructions to sort this list by calling it's
+built in methods. To further understand i'm going to sort playing cards.
+
+DO NOT:
+1. Modify any other robot method other than sort()
+2. Store any variables
+3. Access instance variables
+4. Use any python libraroes or methods
+
+YOU CAN:
+1. Use pre-defined robot methods
+2. Use logical operators - (`if`, `and`, `or`, `not`)
+3. Use comparison operators - (`>`, `>=`, `<`, `<=`, `==`, `is`)
+4. Use iterators - (`while`, `for`, `break`, `continue`)
+5. Define robot helper method that still follow the rules
+
+Start with 1st pass solution then..
+Make sure to do Step 4 of Polya to optimize solution so it's not to slow 
+and so that it runs in less that 1 second.
+
+Questions:
+* Which sorting method should I use? - 1st pass will be selection sort... optimized
+may be Merge Sort.. Divide and conquor...Sounds fitting for a robot..
+
+* Can I use len()? - no 
+
+* Why is it important that the robot only has one bit of memory and that memory
+    is it's light? - I assume this means the robot cannot store anything in memory
+    which will affect what time of algorithm we use.
+
+Why does the robot need a light to sort items?
+Which of it's methods will help me in sorting the list?
+Which of the methods if any can i ignore?
+
+* What does it mean when the robot "swaps" something?  - this means that it will
+pick up the item in front of it, and put down the item is was holding in the same position.
+This results in it holding a new item.
+
+* What is the signifcance or importance of the timer counter? - Maybe it can tell me
+how long the list is if the robot moves right until it can't move any more
+
+* What are my inputs - using self.list inside the sort() method, do not have to
+pass it in
+
+* What should I be returning - the newly sorted list
+
+* Is it ok to mutate the list? - Should probably never mutate the original collection
+
+PLAN: *** See the sort() method for note and comments on the plan ***
+"""
